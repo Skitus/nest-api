@@ -7,21 +7,21 @@ import {TypeOrmModule} from '@nestjs/typeorm';
 
 require('dotenv').config();
 
-
-
 @Module({
     imports: [
         ConfigModule.forRoot({isGlobal: true}),
         TypeOrmModule.forRoot({
             type: 'postgres',
-            host: process.env.POSTGRES_HOST,
+            url: process.env.DATABASE_URL,
+            ssl: { rejectUnauthorized: false },
+            /*host: process.env.POSTGRES_HOST,
             port: parseInt(<string>process.env.POSTGRES_PORT),
-            username: process.env.POSTGRES_USER,
+            username: process.env.POSTGRES_USERNAME,
             password: process.env.POSTGRES_PASSWORD,
-            database: process.env.POSTGRES_DATABASE,
+            database: process.env.POSTGRES_DATABASE,*/
             autoLoadEntities: true,
-            synchronize: true
-
+            synchronize: true,
+            entities: ['dist/**/*.entity{.ts,.js}'],
         }),
         FeedbackFormModule],
     controllers: [AppController],

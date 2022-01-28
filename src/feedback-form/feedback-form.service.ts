@@ -1,4 +1,3 @@
-/*
 import {Injectable} from '@nestjs/common';
 import {Repository} from 'typeorm';
 import {FeedbackEntities} from '../entities/feedback.enteties';
@@ -23,4 +22,3 @@ export class FeedbackFormService {
     }
 
 }
-*/

@@ -1,4 +1,3 @@
-/*
 import { Test, TestingModule } from '@nestjs/testing';
 import { FeedbackFormController } from './feedback-form.controller';
 
@@ -17,4 +16,3 @@ describe('FeedbackFormController', () => {
     expect(controller).toBeDefined();
   });
 });
-*/

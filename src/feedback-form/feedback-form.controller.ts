@@ -1,4 +1,3 @@
-/*
 import {Body, Controller, Get, HttpCode, HttpStatus, Post} from '@nestjs/common';
 import {CreateMessageDto} from './dto/create-message.dto';
 import {FeedbackFormService} from './feedback-form.service';
@@ -20,4 +19,3 @@ export class FeedbackFormController {
         return this.feedbackFromService.createMessage(createMessageDto);
     }
 }
-*/

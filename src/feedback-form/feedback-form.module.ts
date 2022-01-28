@@ -1,4 +1,3 @@
-/*
 import {Module} from '@nestjs/common';
 import {FeedbackFormService} from './feedback-form.service';
 import {FeedbackFormController} from './feedback-form.controller';
@@ -13,4 +12,4 @@ import {FeedbackEntities} from '../entities/feedback.enteties';
 
 export class FeedbackFormModule {
 
-}*/
+}

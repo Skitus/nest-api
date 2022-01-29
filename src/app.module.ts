@@ -14,11 +14,6 @@ require('dotenv').config();
             type: 'postgres',
             url: process.env.DATABASE_URL,
             ssl: { rejectUnauthorized: false },
-            /*host: process.env.POSTGRES_HOST,
-            port: parseInt(<string>process.env.POSTGRES_PORT),
-            username: process.env.POSTGRES_USERNAME,
-            password: process.env.POSTGRES_PASSWORD,
-            database: process.env.POSTGRES_DATABASE,*/
             autoLoadEntities: true,
             synchronize: true,
             entities: ['dist/**/*.entity{.ts,.js}'],

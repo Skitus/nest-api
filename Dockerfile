@@ -33,7 +33,7 @@ RUN yarn --ignore-scripts run build
 FROM node:18-alpine as prod
 RUN apk --update add nodejs npm
 
-ARG NODE_ENV=production
+ARG NODE_ENV=dev
 ENV NODE_ENV=dev
 
 # WORKDIR /usr/src/app

@@ -1,24 +1,24 @@
 version: '3.8'
 services:
   api:
-    container_name: 'wehost_be_${NODE_ENV}'
-    image: 'wehost_be_${NODE_ENV}'
+    container_name: 'wehost_be_dev'
+    image: 'wehost_be_dev'
     environment:
-      - NODE_ENV:${NODE_ENV}
+      - NODE_ENV:dev
     command: yarn
     build:
       context: .
       dockerfile: Dockerfile
-      target: '${NODE_ENV}'
+      target: 'dev'
     env_file:
       - .env
     entrypoint:
       - yarn
       - run
-      - 'start:${NODE_ENV}'
+      - 'start:dev'
 
     ports:
-      - ${PORT}:${PORT}
+      - 8080:8080
     networks:
       - nesjs-network
     volumes:
